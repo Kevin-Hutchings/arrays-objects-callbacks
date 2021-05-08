@@ -118,7 +118,10 @@ contains(names, 'Colt', function(result){
   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
 */
 
-//Code Here
+function uniq(names, cb){
+  names.splice(0, names.length, ...(new Set(names)))
+  cb(names)
+}
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -135,7 +138,9 @@ uniq(names, function(uniqArr){
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-//Code Here 
+function each(names, cb){
+  names.forEach(cb, each)
+}
 
 // Do not edit the code below.
 each(names, function(item, indice){
