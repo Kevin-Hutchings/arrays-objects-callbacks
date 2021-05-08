@@ -51,7 +51,7 @@ first(names, function(firstName){
 */
 
 function last(names, cb){
-  cb()
+  cb(names[names.length-1])
 }
 
 // Do not edit the code below.
@@ -70,7 +70,9 @@ last(names, function(lastName){
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
 
-//Code Here
+function multiply(num1, num2, cb){
+  cb(num1*num2)
+}
 
 // Do not edit the code below.
 multiply(4, 3, function(answer){
@@ -89,7 +91,13 @@ multiply(4, 3, function(answer){
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-//Code Here 
+function contains(names, name, cb){
+  if(names.indexOf('Colt')){
+    cb(true)
+  } else {
+    cb(false)
+  }
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
