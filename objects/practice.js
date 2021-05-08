@@ -145,14 +145,15 @@ methodCollection.logHello();
   Return a new object with all of the information that you passed in.
 */
 
-var makePerson = new makePerson('Kevin', 1991, 111111);
-function makePerson(name, birthday, ssn) {
-  this.name = name;
-  this.birthday = birthday;
-  this.ssn = ssn;
+function makePerson(name, birthday, ssn){
+  return {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+  }
 }
 
-
+makePerson('John Smith', '1/1/2020', 123456789);
 
 ////////// PROBLEM 7 //////////
 
@@ -162,5 +163,9 @@ function makePerson(name, birthday, ssn) {
 */
 
 function makeCard(cardNumber, expirationDate, securityCode){
-
+  return {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
 }
