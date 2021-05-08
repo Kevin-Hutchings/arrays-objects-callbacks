@@ -203,15 +203,18 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 function removeItem(myGroceryList, item){
+  if (!myGroceryList || !item) return [];
   let index = myGroceryList.indexOf(item);
-  if (index > -1) {
+  if (index >= 0) {
     myGroceryList.splice(index, 1);
   }
-  return myGroceryList;
+  return myGroceryList
 }
 
 function addItem(myGroceryList, item){
-
+  if (!myGroceryList || !item) return [];
+  myGroceryList.push(item)
+  return myGroceryList
 }
 
 ////////// PROBLEM 9 //////////
@@ -272,7 +275,9 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-
+function longer(arr1, arr2){
+  
+}
 
 
 
