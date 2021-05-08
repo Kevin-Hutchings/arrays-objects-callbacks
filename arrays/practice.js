@@ -93,6 +93,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 function evenFinder(nums){
+  var evens = [];
   for (let i = 0; i < nums.length; i++) {
     if(nums[i] % 2 === 0) {
       evens.push(nums[i])
@@ -101,9 +102,7 @@ function evenFinder(nums){
   return evens
 }
 
-var evens = [];
-evenFinder(nums);
-console.log(evens)
+
 
 
 
@@ -129,21 +128,23 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 function divider(numbersArray){
+  var evens = [];
+  var odds = [];
   for (let i=0; i < numbersArray.length; i++){
-    if (numbersArray[i] % 2 === 0) {
+    if (i % 2 === 0) {
       evens.push(numbersArray[i])
     } else {
       odds.push(numbersArray[i])
     }
   }
-  return evens, odds;
+  return [
+    evens,
+    odds
+  ]
 };
 
-var evens = [];
-var odds = [];
-var evensAndOdds = evens.concat(odds);
-divider(numbersArray);
-console.log(odds)
+
+
 
 ////////// PROBLEM 7 //////////
 
@@ -163,7 +164,16 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(array){
+  let randomNumber = getRandomArbitrary();
+  for (let i=0; i < getRandomArbitrary.length; i++){
+    if (randomNumber == getRandomArbitrary){
+      return true
+    } else {
+      return false
+    }
+  }
+}
 
 
 
@@ -192,9 +202,17 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(myGroceryList, item){
+  let index = myGroceryList.indexOf(item);
+  if (index > -1) {
+    myGroceryList.splice(index, 1);
+  }
+  return myGroceryList;
+}
 
+function addItem(myGroceryList, item){
 
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -202,7 +220,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+function maker(){
+  var makerArray = new Array(215)
+  for (let i=0; i < makerArray.length; i++){
+    makerArray[i] = i + 1;
+  }
+  return makerArray;
+}
 
 
 
@@ -218,7 +242,12 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+function addTen(numbers){
+  for(let i=0; i < numbers.length; i++){
+    numbers[i] += 10;
+  }
+  return numbers;
+}
 
 
 
@@ -243,7 +272,7 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
+
 
 
 
